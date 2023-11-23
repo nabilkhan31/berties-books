@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bargain Books</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <a href="/"><button class="home-btn"><i class="fa fa-home"></i> Home</button></a>
+    <h1>These are bargain books from <%=shopName%></h1>
+    <div class="list-container">
+      <!-- map over availableBooks array as it is cleaner and easier to implement features in the future like deletion -->
+      <% availableBooks.map((book)=>{ %>
+        <div class="card">
+          <!-- card which contains information about the books below £20 -->
+          <h4><%=book.name%> <span id="author-text"><%=book.author%></span></h3>
+          <p>Price: £<%=book.price%></p>
+          <p id="description-bold">Description</p>
+          <p id="description-body"><%=book.description%></p>
+        </div>
+        <% }) %>
+    </div>
+  </body>
+</html>

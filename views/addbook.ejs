@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Book for <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <a href="/"><button class="home-btn"><i class="fa fa-home"></i> Home</button></a>
+    <h1>Register for <%=shopName%></h1>
+
+    <!-- POST method as user is making a request to add a book -->
+    <form method="POST" action="/bookadded">
+      <!-- 4 fields, name, author, price, and description -->
+      <p class="form-text">Book name: </p>
+      <input id="name" type="text" name="name" value="" />
+
+      <p class="form-text">Author: </p>
+      <input id="author" type="text" name="author" value="" />
+
+      <p class="form-text">Price: </p>
+      <input id="price" type="text" name="price" value="" />
+
+      <p class="form-text">Description: </p>
+      <input id="description" type="text" name="description" value="" />
+      
+      <p></p>
+      <!-- submits the form data -->
+      <input type="submit" value="Add Book" />
+    </form>
+  </body>
+</html>
